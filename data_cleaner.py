@@ -16,18 +16,19 @@ import pandas as pd
 import os
 
 wa_schema = [
-    'Member ID',
-    'First name',
+    #'Member ID',
+    #'First name',
     'Last name',
     'Organization',
-    'Preferred Email',
+    #'Preferred Email',
     'Preferred Phone',
-    'Preferred Mail Option',
-    'Password,Job title',
+    #'Preferred Mail Option',
+    #'Password',
+    'Job title',
     'Library or Department Within Parent Organization',
     'Work Address 1',
     'Work Address 2',
-    'Work City',
+    #'Work City',
     'Work Province/State',
     'Work Postal Code',
     'Work Country',
@@ -46,9 +47,10 @@ wa_schema = [
     'Home Cellular Phone',
     'Home Fax Number',
     'ACRL Member',
-    'Interest Groups',
+    #'Interest Groups',
     'Membership History (2010 & prior)',
-    'Retired,Group participation',
+    'Retired',
+    'Group participation',
     'Current Leadership Positions',
     'Past Leadership Positions',
     'Current Committees',
@@ -57,31 +59,31 @@ wa_schema = [
     'Directory listing text',
     'Expected Graduation Date',
     'School Attending',
-    'Archived',
-    'Subscribed to emails',
-    'Subscription source',
-    'Opted in',
-    'Event announcements',
-    'Member emails and newsletters',
-    'Administration access',
-    'Created on',
-    'Profile last updated',
-    'Last login',
-    'Updated by',
-    'Balance',
-    'Total donated',
-    'Membership enabled',
-    'Membership level',
-    'Membership status',
-    'Member since',
-    'Renewal due',
-    'Renewal date last changed',
-    'Level last changed',
-    'Access to profile by others',
-    'Details to show',
-    'Photo albums enabled',
-    'Member bundle ID or email',
-    'Member role'
+    #'Archived',
+    #'Subscribed to emails',
+    #'Subscription source',
+    #'Opted in',
+    #'Event announcements',
+    #'Member emails and newsletters',
+    #'Administration access',
+    #'Created on',
+    #'Profile last updated',
+    #'Last login',
+    #'Updated by',
+    #'Balance',
+    #'Total donated',
+    #'Membership enabled',
+    #'Membership level',
+    #'Membership status',
+    #'Member since',
+    #'Renewal due',
+    #'Renewal date last changed',
+    #'Level last changed',
+    #'Access to profile by others',
+    #'Details to show',
+    #'Photo albums enabled',
+    #'Member bundle ID or email',
+    #'Member role'
 ]
 
 # FUNCTION DEFINITIONS
@@ -97,6 +99,19 @@ def write_output_file(df):
     output_file = cd + '/' + output_filename
     df.to_csv(output_file, encoding='utf-8')
 
+def city(items):
+    cities = []
+    for item in items:
+        if type(item) is not str:
+            item = ''
+            cities.append(item)
+        else:
+            item = str(item).lower()
+            item = item.title()
+            cities.append(item)
+    a = pd.Series(cities)
+    return a
+
 
 # MAIN PROGRAM
 
@@ -104,7 +119,11 @@ def main():
     # get the data
     data = grab_df()
 
+
     # do stuff with the data
+    data['First name'] = data['First name'].str.title()
+    data['Details to show'] = ''
+    data['Work City'] = city(data['Work City'])
 
 
     # write the data back to file
