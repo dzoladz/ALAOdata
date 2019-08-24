@@ -6,7 +6,7 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Member ID
 - [x] First name
 - [ ] Last name
-- [ ] Organization
+- [x] Organization
 - [x] Preferred Email
 - [ ] Preferred Phone
 - [x] Preferred Mail Option
