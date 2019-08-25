@@ -29,7 +29,7 @@ def write_output_file(df):
     output_file = cd + '/' + output_filename
     df.to_csv(output_file, encoding='utf-8')
 
-def city(items):
+def clean_city(items):
     cities = []
     for item in items:
         if type(item) is not str:
@@ -39,8 +39,27 @@ def city(items):
             item = str(item).lower()
             item = item.title()
             cities.append(item)
-    a = pd.Series(cities)
-    return a
+    x = pd.Series(cities)
+    return x
+
+def clean_orgs(orgs):
+    organizations = []
+    special_org_map = {
+        "Ohionet": "OhioNET",
+        "Ohiolink": "OhioLINK",
+        'Oclc': 'OCLC'
+    }
+    for org in orgs:
+        if type(org) is not str:
+            org = ''
+        else:
+            org = str(org).title()
+            for key, value in special_org_map.items():
+                if org == key:
+                    org = value
+        organizations.append(org)
+    x = pd.Series(organizations)
+    return x
 
 
 # MAIN PROGRAM
@@ -53,7 +72,8 @@ def main():
     # do stuff with the data
     data['First name'] = data['First name'].str.title()
     data['Details to show'] = ''
-    data['Work City'] = city(data['Work City'])
+    data['Work City'] = clean_city(data['Work City'])
+    data['Organization'] = clean_orgs(data['Organization'])
 
 
     # write the data back to file
