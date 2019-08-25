@@ -1,3 +1,10 @@
 .idea
 ALAOdata.csv
 ALAOdata-clean.csv
+*.csv
+*.xls
+*.xlsx
+*.tsv
+*.txt
+*.odt
+*.ods
