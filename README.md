@@ -16,7 +16,7 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [ ] Work Address 1
 - [ ] Work Address 2
 - [x] Work City
-- [ ] Work Province/State
+- [x] Work Province/State
 - [ ] Work Postal Code
 - [ ] Work Country
 - [ ] Work Email Address
