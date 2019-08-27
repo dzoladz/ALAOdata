@@ -61,6 +61,17 @@ def clean_orgs(orgs):
     x = pd.Series(organizations)
     return x
 
+def clean_states(states):
+    clean_states = []
+    for state in states:
+        if type(state) is not str:
+            state = ''
+        else:
+            state = str(state)[:2].upper()
+        clean_states.append(state)
+    x = pd.Series(clean_states)
+    return x
+
 
 # MAIN PROGRAM
 
@@ -74,6 +85,7 @@ def main():
     data['Details to show'] = ''
     data['Work City'] = clean_city(data['Work City'])
     data['Organization'] = clean_orgs(data['Organization'])
+    data['Work Province/State'] = clean_states(data['Work Province/State'])
 
 
     # write the data back to file
