@@ -14,6 +14,7 @@ output_filename = 'ALAOdata-clean.csv'
 # IMPORT STATEMENTS
 import pandas as pd
 import os
+import re
 
 
 # FUNCTION DEFINITIONS
@@ -72,6 +73,22 @@ def clean_states(states):
     x = pd.Series(clean_states)
     return x
 
+def clean_zips(zips):
+    zips_list = []
+    for zip in zips:
+        if type(zip) is not str:
+            zip = ''
+        elif len(str(zip).strip()) <= 4:
+            print(zip)
+            zip = ''
+        elif ' ' in zip:
+            zip = ''
+        else:
+            zip = zip[:5]
+        zips_list.append(zip)
+    x = pd.Series(zips_list)
+    return x
+
 
 # MAIN PROGRAM
 
@@ -86,6 +103,7 @@ def main():
     data['Work City'] = clean_city(data['Work City'])
     data['Organization'] = clean_orgs(data['Organization'])
     data['Work Province/State'] = clean_states(data['Work Province/State'])
+    data['Work Postal Code'] = clean_zips(data['Work Postal Code'])
 
 
     # write the data back to file
