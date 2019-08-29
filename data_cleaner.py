@@ -79,7 +79,6 @@ def clean_zips(zips):
         if type(zip) is not str:
             zip = ''
         elif len(str(zip).strip()) <= 4:
-            print(zip)
             zip = ''
         elif ' ' in zip:
             zip = ''
@@ -96,10 +95,54 @@ def main():
     # get the data
     data = grab_df()
 
+    # drop these columns
+    drop_columns = [
+        'Password',
+        'Interest Groups',
+        'ACRL Member',
+        'Membership History (2010 & prior)',
+        'Retired',
+        'Group participation',
+        'Current Leadership Positions',
+        'Past Leadership Positions',
+        'Current Committees',
+        'Past Committees',
+        'ALAO Awards',
+        'Directory listing text',
+        'Expected Graduation Date',
+        'School Attending',
+        'Archived',
+        'Subscribed to emails',
+        'Subscription source',
+        'Opted in',
+        'Event announcements',
+        'Member emails and newsletters',
+        'Administration access',
+        'Created on',
+        'Profile last updated',
+        'Last login',
+        'Updated by',
+        'Balance',
+        'Total donated',
+        'Membership enabled',
+        'Membership level',
+        'Membership status',
+        'Member since',
+        'Renewal due',
+        'Renewal date last changed',
+        'Level last changed',
+        'Access to profile by others',
+        'Details to show',
+        'Photo albums enabled',
+        'Member bundle ID or email',
+        'Member role',
+        'Details to show'
+    ]
+    data.drop(drop_columns, inplace=True, axis=1)
+
 
     # do stuff with the data
     data['First name'] = data['First name'].str.title()
-    data['Details to show'] = ''
     data['Work City'] = clean_city(data['Work City'])
     data['Organization'] = clean_orgs(data['Organization'])
     data['Work Province/State'] = clean_states(data['Work Province/State'])
