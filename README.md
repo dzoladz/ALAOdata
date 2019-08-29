@@ -10,7 +10,6 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Preferred Email
 - [ ] Preferred Phone
 - [x] Preferred Mail Option
-- [x] Password
 - [ ] Job title
 - [ ] Library or Department Within Parent Organization
 - [ ] Work Address 1
@@ -33,19 +32,22 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [ ] Home Phone
 - [ ] Home Cellular Phone
 - [ ] Home Fax Number
-- [ ] ACRL Member
+
+#### Drop the following columns from the output.
+- [x] Password
+- [x] ACRL Member
 - [x] Interest Groups
-- [ ] Membership History (2010 & prior)
-- [ ] Retired
-- [ ] Group participation
-- [ ] Current Leadership Positions
-- [ ] Past Leadership Positions
-- [ ] Current Committees
-- [ ] Past Committees
-- [ ] ALAO Awards
-- [ ] Directory listing text
-- [ ] Expected Graduation Date
-- [ ] School Attending
+- [x] Membership History (2010 & prior)
+- [x] Retired
+- [x] Group participation
+- [x] Current Leadership Positions
+- [x] Past Leadership Positions
+- [x] Current Committees
+- [x] Past Committees
+- [x] ALAO Awards
+- [x] Directory listing text
+- [x] Expected Graduation Date
+- [x] School Attending
 - [x] Archived
 - [x] Subscribed to emails
 - [x] Subscription source
