@@ -8,7 +8,7 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [ ] Last name
 - [x] Organization
 - [x] Preferred Email
-- [ ] Preferred Phone
+- [x] Preferred Phone
 - [x] Preferred Mail Option
 - [ ] Job title
 - [ ] Library or Department Within Parent Organization
