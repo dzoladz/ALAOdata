@@ -88,6 +88,33 @@ def clean_zips(zips):
     x = pd.Series(zips_list)
     return x
 
+def clean_phone(numbers):
+    clean_numbers = []
+    for number in numbers:
+        if type(number) is not str:
+            number = ''
+        else:
+            number = re.sub('[^0-9]', '', number)
+            # NANP rules do not permit the digits 0 and 1 as the leading digit
+            if number.startswith('0') or len(number) < 7:
+                number = ''
+            elif number.startswith('1'):
+                number = re.sub('^([1]{1})([0-9]{3})([0-9]{3})([0-9]{4})', '1-\\2-\\3-\\4', number)
+                print(number)
+            elif len(number) == 7:
+                number = re.sub('^([0-9]{3})([0-9]{4})', '\\1-\\2', number)
+                print(number)
+            elif len(number) == 10:
+                number = re.sub('^([0-9]{3})([0-9]{3})([0-9]{4})', '\\1-\\2-\\3', number)
+                print(number)
+            elif len(number) > 10:
+                number = re.sub('^([0-9]{3})([0-9]{3})([0-9]{4})([0-9])', '\\1-\\2-\\3 x\\4', number)
+                print(number)
+            else:
+                number = ''
+        clean_numbers.append(number)
+    x = pd.Series(clean_numbers)
+    return x
 
 # MAIN PROGRAM
 
@@ -147,6 +174,7 @@ def main():
     data['Organization'] = clean_orgs(data['Organization'])
     data['Work Province/State'] = clean_states(data['Work Province/State'])
     data['Work Postal Code'] = clean_zips(data['Work Postal Code'])
+    data['Preferred Phone'] = clean_phone(data['Preferred Phone'])
 
 
     # write the data back to file
