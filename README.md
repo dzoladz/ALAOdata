@@ -19,9 +19,9 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Work Postal Code
 - [ ] Work Country
 - [ ] Work Email Address
-- [ ] Work Phone
-- [ ] Work Cellular Phone
-- [ ] Work Fax Number
+- [x] Work Phone
+- [x] Work Cellular Phone
+- [x] Work Fax Number
 - [ ] Home Address 1
 - [ ] Home Address 2
 - [ ] Home City
@@ -29,9 +29,9 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [ ] Home Postal Code
 - [ ] Home Country
 - [ ] Home Email Address
-- [ ] Home Phone
-- [ ] Home Cellular Phone
-- [ ] Home Fax Number
+- [x] Home Phone
+- [x] Home Cellular Phone
+- [x] Home Fax Number
 
 #### Drop the following columns from the output.
 - [x] Password
