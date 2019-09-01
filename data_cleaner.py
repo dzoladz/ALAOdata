@@ -174,7 +174,9 @@ def main():
     data['Work Phone'] = clean_phone(data['Work Phone'])
     data['Work Cellular Phone'] = clean_phone(data['Work Cellular Phone'])
     data['Work Fax Number'] = clean_phone(data['Work Fax Number'])
-
+    data['Home Phone'] = clean_phone(data['Home Phone'])
+    data['Home Cellular Phone'] = clean_phone(data['Home Cellular Phone'])
+    data['Home Fax Number'] = clean_phone(data['Home Fax Number'])
 
 
     # write the data back to file
