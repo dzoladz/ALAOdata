@@ -100,16 +100,12 @@ def clean_phone(numbers):
                 number = ''
             elif number.startswith('1'):
                 number = re.sub('^([1]{1})([0-9]{3})([0-9]{3})([0-9]{4})', '1-\\2-\\3-\\4', number)
-                print(number)
             elif len(number) == 7:
                 number = re.sub('^([0-9]{3})([0-9]{4})', '\\1-\\2', number)
-                print(number)
             elif len(number) == 10:
                 number = re.sub('^([0-9]{3})([0-9]{3})([0-9]{4})', '\\1-\\2-\\3', number)
-                print(number)
             elif len(number) > 10:
                 number = re.sub('^([0-9]{3})([0-9]{3})([0-9]{4})([0-9])', '\\1-\\2-\\3 x\\4', number)
-                print(number)
             else:
                 number = ''
         clean_numbers.append(number)
