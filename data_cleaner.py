@@ -175,6 +175,10 @@ def main():
     data['Work Province/State'] = clean_states(data['Work Province/State'])
     data['Work Postal Code'] = clean_zips(data['Work Postal Code'])
     data['Preferred Phone'] = clean_phone(data['Preferred Phone'])
+    data['Work Phone'] = clean_phone(data['Work Phone'])
+    data['Work Cellular Phone'] = clean_phone(data['Work Cellular Phone'])
+    data['Work Fax Number'] = clean_phone(data['Work Fax Number'])
+
 
 
     # write the data back to file
