@@ -175,7 +175,9 @@ def main():
         'Photo albums enabled',
         'Member bundle ID or email',
         'Member role',
-        'Details to show'
+        'Details to show',
+        'Work Email Address',
+        'Home Email Address'
     ]
     data.drop(drop_columns, inplace=True, axis=1)
 
