@@ -3,6 +3,16 @@ ALAO - Data Review
 
 Below is a list of data elements that need to be evaluated for processing by the script. If you complete a data transformation for one of these elements, please mark it complete by updating the `README.md` file.
 
+#### To-do
+- [ ] Job title
+- [ ] Library or Department Within Parent Organization
+- [ ] Work Address 1
+- [ ] Work Address 2
+- [ ] Home Address 1
+- [ ] Home Address 2
+- [ ] Home Country
+
+#### Complete
 - [x] Member ID
 - [x] First name
 - [x] Last name
@@ -10,25 +20,16 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Preferred Email
 - [x] Preferred Phone
 - [x] Preferred Mail Option
-- [ ] Job title
-- [ ] Library or Department Within Parent Organization
-- [ ] Work Address 1
-- [ ] Work Address 2
 - [x] Work City
 - [x] Work Province/State
 - [x] Work Postal Code
 - [x] Work Country
-- [ ] Work Email Address
 - [x] Work Phone
 - [x] Work Cellular Phone
 - [x] Work Fax Number
-- [ ] Home Address 1
-- [ ] Home Address 2
 - [x] Home City
 - [x] Home Province/State
 - [x] Home Postal Code
-- [ ] Home Country
-- [ ] Home Email Address
 - [x] Home Phone
 - [x] Home Cellular Phone
 - [x] Home Fax Number
@@ -73,3 +74,5 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Photo albums enabled
 - [x] Member bundle ID or email
 - [x] Member role
+- [x] Work Email Address
+- [x] Home Email Address
