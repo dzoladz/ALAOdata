@@ -24,9 +24,9 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Work Fax Number
 - [ ] Home Address 1
 - [ ] Home Address 2
-- [ ] Home City
-- [ ] Home Province/State
-- [ ] Home Postal Code
+- [x] Home City
+- [x] Home Province/State
+- [x] Home Postal Code
 - [ ] Home Country
 - [ ] Home Email Address
 - [x] Home Phone
