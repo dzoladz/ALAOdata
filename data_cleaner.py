@@ -112,6 +112,22 @@ def clean_phone(numbers):
     x = pd.Series(clean_numbers)
     return x
 
+def clean_countries(countries):
+    clean_countries = []
+    for country in countries:
+        if type(country) is not str:
+            country = ''
+        elif re.match('[uU].*', str(country)):
+            country = 'USA'
+            print(country)
+        else:
+            country = str(country).upper()
+        clean_countries.append(country)
+    x = pd.Series(clean_countries)
+    return x
+
+
+
 # MAIN PROGRAM
 
 def main():
@@ -181,6 +197,7 @@ def main():
     data['Home City'] = clean_city(data['Home City'])
     data['Home Province/State'] = clean_states(data['Home Province/State'])
     data['Home Postal Code'] = clean_zips(data['Home Postal Code'])
+    data['Work Country'] = clean_countries(data['Work Country'])
 
     # write the data back to file
     write_output_file(data)
