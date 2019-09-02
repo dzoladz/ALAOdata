@@ -178,7 +178,9 @@ def main():
     data['Home Phone'] = clean_phone(data['Home Phone'])
     data['Home Cellular Phone'] = clean_phone(data['Home Cellular Phone'])
     data['Home Fax Number'] = clean_phone(data['Home Fax Number'])
-
+    data['Home City'] = clean_city(data['Home City'])
+    data['Home Province/State'] = clean_states(data['Home Province/State'])
+    data['Home Postal Code'] = clean_zips(data['Home Postal Code'])
 
     # write the data back to file
     write_output_file(data)
