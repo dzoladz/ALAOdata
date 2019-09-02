@@ -166,6 +166,7 @@ def main():
 
     # do stuff with the data
     data['First name'] = data['First name'].str.title()
+    data['Last name'] = data['Last name'].str.title()
     data['Work City'] = clean_city(data['Work City'])
     data['Organization'] = clean_orgs(data['Organization'])
     data['Work Province/State'] = clean_states(data['Work Province/State'])
