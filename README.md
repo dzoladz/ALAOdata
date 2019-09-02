@@ -10,7 +10,6 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [ ] Work Address 2
 - [ ] Home Address 1
 - [ ] Home Address 2
-- [ ] Home Country
 
 #### Complete
 - [x] Member ID
@@ -33,6 +32,7 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Home Phone
 - [x] Home Cellular Phone
 - [x] Home Fax Number
+- [x] Home Country
 
 #### Drop the following columns from the output.
 - [x] Password
