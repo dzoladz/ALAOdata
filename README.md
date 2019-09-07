@@ -6,7 +6,7 @@ Below is a list of data elements that need to be evaluated for processing by the
 #### To-do
 - [ ] Job title
 - [ ] Library or Department Within Parent Organization
-- [ ] Work Address 1
+- [x] Work Address 1
 - [ ] Work Address 2
 - [ ] Home Address 1
 - [ ] Home Address 2
