@@ -125,6 +125,21 @@ def clean_countries(countries):
     x = pd.Series(clean_countries)
     return x
 
+def clean_address_1(addresses):
+    clean_addr1 = []
+    for address in addresses:
+        if type(address) is not str:
+            address = ''
+        else:
+            address = str(address).title()
+            if 'Of' in address:
+                address = address.replace('Of', 'of')
+            elif 'Ohionet' in address:
+                address = address.replace('Ohionet', 'OhioNET')
+        clean_addr1.append(address)
+    x = pd.Series(clean_addr1)
+    return x
+
 
 # MAIN PROGRAM
 
@@ -199,6 +214,7 @@ def main():
     data['Home Postal Code'] = clean_zips(data['Home Postal Code'])
     data['Work Country'] = clean_countries(data['Work Country'])
     data['Home Country'] = clean_countries(data['Home Country'])
+    data['Work Address 1'] = clean_address_1(data['Work Address 1'])
 
     # write the data back to file
     write_output_file(data)
