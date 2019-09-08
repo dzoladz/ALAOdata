@@ -6,10 +6,6 @@ Below is a list of data elements that need to be evaluated for processing by the
 #### To-do
 - [ ] Job title
 - [ ] Library or Department Within Parent Organization
-- [x] Work Address 1
-- [ ] Work Address 2
-- [ ] Home Address 1
-- [ ] Home Address 2
 
 #### Complete
 - [x] Member ID
@@ -33,6 +29,10 @@ Below is a list of data elements that need to be evaluated for processing by the
 - [x] Home Cellular Phone
 - [x] Home Fax Number
 - [x] Home Country
+- [x] Work Address 1
+- [x] Work Address 2
+- [x] Home Address 1
+- [x] Home Address 2
 
 #### Drop the following columns from the output.
 - [x] Password
