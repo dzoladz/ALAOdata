@@ -48,7 +48,25 @@ def clean_orgs(orgs):
     special_org_map = {
         "Ohionet": "OhioNET",
         "Ohiolink": "OhioLINK",
-        'Oclc': 'OCLC'
+        'Oclc': 'OCLC',
+        'Lexisnexis': 'LexisNexis',
+        'Proquest': 'ProQuest',
+        'Ebsco': 'EBSCO',
+        'Olssi': 'OLSSI',
+        'Utc': 'UTC',
+        'Osu-Newark/Cotc': 'OSU-Newark/COTC',
+        'Bgsu': 'BGSU',
+        'Uw-M': 'UW-M',
+        'Osu Libraries': 'OSU Libraries',
+        'Pbs': 'PBS',
+        'Ala And Acrl': 'ALA and ACRL',
+        'Infohio': 'INFOhio',
+        'Cwru': 'CWRU',
+        'Osu': 'OSU',
+        'Mla': 'MLA',
+        'Sscc': 'SSCC',
+        'Onu': 'ONU',
+        'Ksu Slis': 'KSU SLIS'
     }
     for org in orgs:
         if type(org) is not str:
@@ -215,6 +233,9 @@ def main():
     data['Work Country'] = clean_countries(data['Work Country'])
     data['Home Country'] = clean_countries(data['Home Country'])
     data['Work Address 1'] = clean_address(data['Work Address 1'])
+    data['Work Address 2'] = clean_address(data['Work Address 2'])
+    data['Home Address 1'] = clean_address(data['Home Address 1'])
+    data['Home Address 2'] = clean_address(data['Home Address 2'])
 
     # write the data back to file
     write_output_file(data)
