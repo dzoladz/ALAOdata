@@ -8,3 +8,4 @@ ALAOdata-clean.csv
 *.txt
 *.odt
 *.ods
+.DS_Store
