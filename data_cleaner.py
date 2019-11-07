@@ -196,7 +196,6 @@ def main():
         'Total donated',
         'Membership enabled',
         'Membership level',
-        'Membership status',
         'Member since',
         'Renewal due',
         'Renewal date last changed',
